@@ -1,0 +1,9 @@
+#gameText {
+  background-color: white;
+  min-height: 150px;
+}
+
+
+#gameBoard {
+  min-height: 450px;
+}

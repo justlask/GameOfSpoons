@@ -24,6 +24,7 @@ a {
 
 a:hover {
   text-shadow: 2px 2px 2px white;
+  cursor: pointer;
 }
 
 header {
@@ -63,7 +64,7 @@ main {
   justify-content: space-around;
   align-content: center;
   text-align: center;
-  padding: 150px 100px 50px;
+  padding: 100px 100px 50px;
 }
 
 #play {
@@ -73,7 +74,7 @@ main {
   padding: 50px;
 }
 
-#play button {
+#play a {
   padding: 5px 15px;
   font-size: 20px;
   border-radius: 8px;
@@ -82,8 +83,9 @@ main {
   box-shadow: 1px 1px black;
 }
 
-#play button:hover {
+#play a:hover {
   cursor: pointer;
   transition: all 3s;
+  background-color: white;
   box-shadow: 3px 5px black;
 }
