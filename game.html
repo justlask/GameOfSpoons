@@ -22,14 +22,32 @@
 
 
     <main>
-       
+       <div id="init">
+         <p>Let's set up the game:</p>
+         <form id="playerInfo">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" required>
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="nonbinary">Non-Binary</option>
+              </select>
+            <label for="illness">Illness</label>
+            <select id="illness">
+                <option value="crohns">Crohn's Disease</option>
+                <option value="lupus">Lupus</option>
+                <option value="other">other</option>
+              </select>
+         </form>
+         <button id="letsGo">Start Game</button>
+       </div>
       <div id="gameBoard">
 
       </div>
-      <div id="gameText">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum minima repellat totam! Ut, rem, excepturi rerum ad quisquam commodi neque facere quo architecto numquam deleniti cumque adipisci illum culpa minus a ducimus asperiores earum repudiandae. 
-          <br>Architecto eligendi quidem aliquid id, voluptatibus nulla tenetur placeat laudantium facilis repellendus consectetur aut, eius non nihil aliquam. Aliquam ducimus, placeat magni suscipit iure inventore.</p>
-      </div>
+
 
     </main>
 

@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #gameText {
   background-color: white;
   min-height: 150px;
@@ -14,4 +19,12 @@
 
 canvas {
   border: 2px solid black;
+}
+
+#init {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
 }
