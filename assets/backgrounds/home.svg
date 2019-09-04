@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:#754C24;}
+	.st3{fill:#FCEE21;stroke:#FBB03B;stroke-width:3;stroke-miterlimit:10;}
+	.st4{fill:#603813;}
+	.st5{fill:#F2F2F2;}
+	.st6{fill:#C69C6D;}
+	.st7{fill:#C1272D;}
+	.st8{fill:#FFFFFF;}
+	.st9{fill:#FFFFFF;stroke:#E6E6E6;stroke-width:2;stroke-miterlimit:10;}
+	.st10{fill:#FFFFFF;stroke:#CCCCCC;stroke-width:2;stroke-miterlimit:10;}
+	.st11{fill:#00FFFF;}
+	.st12{fill:#00FF00;}
+	.st13{fill:#22B573;}
+</style>
+<g id="background">
+	
+		<radialGradient id="SVGID_1_" cx="398.6984" cy="203.254" r="318.3706" gradientTransform="matrix(1.005 0 0 1 -2.5126 0)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#CCE0F4"/>
+		<stop  offset="0.0278" style="stop-color:#C3DBF2"/>
+		<stop  offset="0.0741" style="stop-color:#A9CEEB"/>
+		<stop  offset="0.1331" style="stop-color:#80B8E0"/>
+		<stop  offset="0.2025" style="stop-color:#469AD1"/>
+		<stop  offset="0.2773" style="stop-color:#0075BE"/>
+		<stop  offset="0.9071" style="stop-color:#1E9CD7"/>
+	</radialGradient>
+	<rect y="0.5" class="st0" width="800" height="454"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="0" y1="527" x2="799.5" y2="527">
+		<stop  offset="0.3504" style="stop-color:#009245"/>
+		<stop  offset="0.9071" style="stop-color:#00FF00"/>
+	</linearGradient>
+	<rect y="454.5" class="st1" width="799.5" height="145"/>
+</g>
+<g id="Layer_2">
+	<rect x="499" y="231" class="st2" width="29" height="37"/>
+	<circle class="st3" cx="400.5" cy="203.5" r="56"/>
+	<rect x="493" y="225" width="41" height="6"/>
+	<polygon class="st4" points="261,263 239,360 559,360 539,263 	"/>
+	<rect x="229" y="360" class="st5" width="337" height="14"/>
+	<rect x="239" y="374" class="st6" width="315" height="99"/>
+	<rect x="243" y="473" class="st2" width="311" height="26"/>
+</g>
+<g id="Layer_4">
+	<rect x="341" y="367" class="st2" width="118" height="11"/>
+	<rect x="374" y="389" class="st7" width="53" height="83"/>
+	<circle class="st5" cx="382.5" cy="431.5" r="3.5"/>
+	<rect x="348" y="378" class="st5" width="12" height="94"/>
+	<rect x="440" y="378" class="st8" width="11" height="94"/>
+	<rect x="326" y="472" class="st9" width="147" height="10"/>
+	<rect x="319" y="482" class="st10" width="159" height="14"/>
+	<rect x="316" y="496" class="st10" width="169" height="15"/>
+	<rect x="267" y="389" class="st5" width="57" height="63"/>
+	<rect x="474" y="389" class="st5" width="57" height="63"/>
+	<rect x="275.55" y="398.45" class="st11" width="39.9" height="44.1"/>
+	<rect x="482.55" y="398.45" class="st11" width="39.9" height="44.1"/>
+	<circle class="st12" cx="653" cy="358" r="53"/>
+	<rect x="649" y="411" class="st4" width="11" height="78"/>
+	<circle class="st13" cx="59" cy="334" r="53"/>
+	<rect x="55" y="387" class="st4" width="11" height="78"/>
+</g>
+</svg>

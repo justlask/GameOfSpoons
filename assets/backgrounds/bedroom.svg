@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BDCCD4;}
+	.st1{fill:#C69C6D;}
+	.st2{fill:#754C24;}
+	.st3{fill:#E6E6E6;}
+	.st4{fill:#FFFFFF;stroke:#B3B3B3;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;stroke:#CCCCCC;stroke-width:4;stroke-miterlimit:10;}
+	.st6{fill:#603813;}
+	.st7{fill:#8C6239;}
+	.st8{fill:#0000FF;}
+</style>
+<g id="wall">
+	<rect class="st0" width="800" height="600"/>
+	<rect y="508" class="st1" width="800" height="92"/>
+</g>
+<g id="bed">
+	<rect x="116.5" y="277.5" class="st2" width="306" height="230.5"/>
+	<g>
+		<rect x="691" y="215" width="32" height="293"/>
+		<polygon class="st3" points="667,164 745,164 785,224 633,224 		"/>
+	</g>
+	<ellipse class="st4" cx="661.5" cy="368.5" rx="71.5" ry="23.5"/>
+	<rect x="173" y="385" class="st5" width="565" height="74"/>
+	<rect x="738" y="300" class="st6" width="47" height="232"/>
+	<rect x="160" y="459" class="st6" width="602" height="33"/>
+	<rect x="144" y="300" class="st7" width="256" height="45"/>
+	<rect x="144" y="362" class="st7" width="256" height="45"/>
+	<rect x="131" y="385" class="st6" width="42" height="147"/>
+	<rect x="252" y="316" class="st6" width="33" height="7"/>
+	<rect x="253" y="381" class="st6" width="33" height="7"/>
+</g>
+<g id="blanket">
+	<path class="st8" d="M184.47,389.5c24.98-18.8,61.86,15.93,129.66-5c12.36-3.82,21.11-8.05,38.02-10c34.84-4.02,44.43,8.55,75.07,8
+		c38.23-0.68,41.71-20.58,75.07-20c29.05,0.51,50.18,16.02,69.22,30c41.78,30.68,88.79,88.57,75.07,111
+		c-11.29,18.44-49.67-9.91-123.81,0c-73.75,9.86-80.62,43.92-136.48,39c-50.71-4.47-65.62-34.34-103.34-24
+		c-39.92,10.95-45.37,50.48-66.29,48C177.93,561.92,143.57,420.28,184.47,389.5z"/>
+</g>
+</svg>

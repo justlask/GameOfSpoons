@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F2F2F2;}
+	.st1{fill:#B3B3B3;}
+	.st2{fill:#BDCCD4;}
+	.st3{fill:#666666;}
+	.st4{fill:#E6E6E6;}
+	.st5{fill:#E6E6E6;stroke:#666666;stroke-width:2;stroke-miterlimit:10;}
+	.st6{fill:#4D4D4D;}
+	.st7{fill:#29ABE2;}
+	.st8{fill:#6AC6FF;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st9{fill:#FFFFFF;stroke:#CCCCCC;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<g id="wall">
+	<rect y="434" class="st0" width="800" height="166"/>
+	<rect x="0" y="482" width="74" height="59"/>
+	<rect x="74" y="541" width="74" height="59"/>
+	<rect x="148" y="482" width="74" height="59"/>
+	<rect x="222" y="541" width="74" height="59"/>
+	<rect x="296" y="482" width="74" height="59"/>
+	<rect x="370" y="541" width="74" height="59"/>
+	<rect x="444" y="482" width="74" height="59"/>
+	<rect x="518" y="541" width="74" height="59"/>
+	<rect x="592" y="482" width="74" height="59"/>
+	<rect x="666" y="541" width="74" height="59"/>
+	<rect x="740" y="482" width="59" height="59"/>
+	<rect x="74" y="434" class="st1" width="74" height="48"/>
+	<rect x="222" y="434" class="st1" width="74" height="48"/>
+	<rect x="370" y="434" width="74" height="48"/>
+	<rect x="518" y="434" width="74" height="48"/>
+	<rect x="666" y="434" width="74" height="48"/>
+	<rect class="st2" width="800" height="434"/>
+</g>
+<g id="bed">
+	<path class="st3" d="M345,122c-2.07,0-319.07,0-319.12,0c0,0-1.28,0-1.28,0c-4.53,0-9.07,0-13.6,0c0-3.33,0-6.67,0-10h334V122z"/>
+	<path class="st0" d="M244.61,426.53c22.69-27.52,23.61-66.2,24.7-112.29c1.3-54.87-11.36-59.37-7.17-100.92
+		c7.17-71.16,48.4-98.64,34.63-118.41c-14.45-20.75-59.52,9.98-149.97,3.74C84.37,94.34,66.64,77,45.71,91.82
+		c-42.28,29.93-17.76,134.53-16.37,140.2c15.5,63.5,46.38,80.28,39.46,125.55c-6.31,41.29-35.55,50.62-29.19,70.34
+		C52.59,468.13,193.4,488.65,244.61,426.53z"/>
+	<rect x="528" y="191" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 983 -517)" class="st4" width="444" height="84"/>
+	
+		<rect x="639.21" y="301.76" transform="matrix(-7.888108e-03 1 -1 -7.888108e-03 1099.6129 -403.4603)" class="st5" width="221.49" height="84"/>
+	
+		<rect x="718.38" y="328.45" transform="matrix(-7.888108e-03 1 -1 -7.888108e-03 1064.5359 -387.2751)" class="st6" width="12" height="12"/>
+	
+		<rect x="640.21" y="79.76" transform="matrix(-7.888108e-03 1 -1 -7.888108e-03 878.6277 -628.2114)" class="st5" width="221.49" height="84"/>
+	
+		<rect x="718.38" y="106.45" transform="matrix(-7.888108e-03 1 -1 -7.888108e-03 842.5428 -611.0262)" class="st6" width="12" height="12"/>
+	<ellipse class="st7" cx="28.5" cy="388.5" rx="17.5" ry="8.5"/>
+	<ellipse class="st7" cx="322.5" cy="388.5" rx="17.5" ry="8.5"/>
+	<rect x="29" y="394" class="st7" width="295" height="87"/>
+	<rect x="24" y="380" class="st7" width="305" height="17"/>
+	<path class="st3" d="M33,219"/>
+	<path class="st8" d="M434,290L434,290c-27.61,0-50-22.39-50-50v-59c0-27.61,22.39-50,50-50h0c27.61,0,50,22.39,50,50v59
+		C484,267.61,461.61,290,434,290z"/>
+	<rect x="416" y="377" class="st9" width="38" height="104"/>
+	<rect x="375" y="333" class="st9" width="119" height="44"/>
+	<rect x="425" y="308" class="st6" width="19" height="25"/>
+	<rect x="407" y="321" class="st6" width="19" height="12"/>
+	<rect x="444" y="321" class="st6" width="19" height="12"/>
+	<rect x="572.22" y="409" class="st9" width="56.33" height="46"/>
+	<path class="st9" d="M624.06,421H576.5c-15.19,0-27.5-12.31-27.5-27.5v0c0-15.19,12.31-27.5,27.5-27.5h47.56
+		c15.19,0,27.5,12.31,27.5,27.5v0C651.56,408.69,639.24,421,624.06,421z"/>
+	<rect x="550.44" y="366" class="st9" width="102.56" height="16"/>
+	<rect x="566.33" y="334" class="st9" width="67.89" height="28"/>
+	<rect x="527" y="210" class="st3" width="150" height="7"/>
+</g>
+</svg>

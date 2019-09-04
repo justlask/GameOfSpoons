@@ -35,7 +35,6 @@ header {
 }
 
 footer {
-  min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,10 +52,7 @@ nav {
   align-items: center;
 }
 
-main {
-  min-height: 80vh;
-  padding: 0 50px;
-}
+
 
 #about {
   display: flex;
@@ -64,14 +60,25 @@ main {
   justify-content: space-around;
   align-content: center;
   text-align: center;
-  padding: 100px 100px 50px;
+  padding-top: 50px;
+}
+
+
+#about  div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about div:last-child {
+  padding: 0px 15vw;
 }
 
 #play {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
 }
 
 #play a {
@@ -88,4 +95,26 @@ main {
   transition: all 3s;
   background-color: white;
   box-shadow: 3px 5px black;
+}
+
+#about div:first-child h1 {
+  display: inline-block;
+  max-width: 500px;
+
+}
+
+#about div:first-child img {
+  height: 300px;
+  width: auto;
+}
+
+
+@media only screen and (max-width: 900px) {
+  main {
+    padding: 0;
+  }
+
+  header {
+    flex-direction: column;
+  }
 }

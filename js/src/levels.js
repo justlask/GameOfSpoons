@@ -7,9 +7,14 @@ document.querySelector("#letsGo").onclick = () => {
 
   let player1 = new player(name, gender, age, illness)
   document.getElementById("init").setAttribute("style", "display:none")
+  document.querySelector("main").setAttribute("style", "display:flex")
+
+
 
   avatars(player1);
-  initGame(player1);
+  console.log(player1)
+  levels(morningScenarios, player1);
+  console.log(player1)
 }
 
 // Player class
@@ -47,110 +52,67 @@ function avatars(player) {
   }
 }
 
-// Initializes game... game intro
-function initGame(player1) {
-  document.querySelector("main").innerHTML += `<button id="start">Begin</button>`
-
-  let height = window.innerHeight-200;
-  let width = window.innerWidth-200;
-
-  document.getElementById("gameBoard").innerHTML += `<canvas id="game" height="${height}" width="${width}">`
-
-  let canvas = document.getElementById("game")
-  let ctx = canvas.getContext("2d");
-  
-  ctx.fillStyle="white";
-  ctx.fillRect(0, 0, width, height);
-
-  let img = new Image();
-  img.onload = function () {
-      ctx.drawImage(img, (width-200)/2, 50);
-  }
-  img.src = player1.happy;
-
-  ctx.fillStyle="black"
-  ctx.font = "20px Georgia";
-  ctx.textAlign = "center"; 
-  ctx.fillText(`Welcome to the game of spoons ${player1.name}.`, width/2, height-90);
-  ctx.fillText(`You will be challenged with living 7 days (levels) with ${player1.illness}.`, width/2, height-70);
-  ctx.fillText(`Each day you will recieve a random number of spoons (energy) to spend.`, width/2, height-50);
-  ctx.fillText(`Take care of your spoons, and choose wisely.`, width/2, height-30);
-  //
-  ctx.fillText(`Day: ${player1.day}`, width-100, 20)
-  ctx.fillText(`Spoons: ${player1.spoons}`, width-100, 40)
-}
-
-
-
-
 const spoonValues = [6,7,8,9,10,11,12]
 const random = Math.floor(Math.random() * spoonValues.length)
 
 
 
 
-document.querySelector("button #start").onclick = (player1) => {
-  player1.spoons += spoonValues[random]
-  console.log(player1.spoons)
-  console.log(player1)
-}
-
-
-
-
-
-
 const morningScenarios = [
   {
-    text: `Your alarm goes off, it’s 7:20 am, your job is expecting you to arrive by 8am. You crack your eyes open, you’re tired, you didn’t sleep well last night.`,
-    spoons: spoonValues[random]
+    text: `Your alarm goes off, it’s 7:20 am, your job is expecting you to arrive by 8am. You crack your eyes open, you’re tired, you didn’t sleep well last night. `,
+    spoons: spoonValues[random],
+    background: "../../assets/backgrounds/bedroom.svg",
+    buttons: 1,
   },
   {
     text: `It’s been a couple days, you kind of stink. Do you take a shower?`,
     yes: -1,
     no: 0,
-    response: `default placeholder response`
+    response: `default placeholder response`,
+    background: "../../assets/backgrounds/bathroom.svg",
+    buttons: 2
   },
   {
     text: `Now that’s out of the way, it’s time to take your medication, do you make breakfast or take them with coffee?`,
     yes: -1,
     no: -2,
-    response: `default placeholder response`
+    response: `default placeholder response`,
+    background: "../../assets/backgrounds/kitchen.svg"
   },
   {
     text: `It’s 7:50, you’re going to be late, it’s time to get ready. Do you take your time or throw something on?`,
     yes: -2,
     no: -1,
-    response: `default placeholder response`
+    response: `default placeholder response`,
+    background: "../../assets/backgrounds/bedroom.svg"
   },
   {
     text: `It’s time to get to work, do you drive or take the train?`,
     yes: 0,
     no: -1,
-    response: `default placeholder response`
+    response: `default placeholder response`,
+    background: "../../assets/backgrounds/home.svg"
   }
 ]
 
-const afternoonScenarios = [
-  {},
-  {},
-  {},
-  {},
-  {}
-]
+  //“Your alarm goes off, it’s 7:20 am, your job is expecting you to arrive by 8am.
+  // You crack your eyes open, you’re tired, you didn’t sleep well last night.”
+  let scene = 0;
+  let gameBoard = document.getElementById("gameBoard")
 
-const eveningScenarios = [
-  {},
-  {},
-  {},
-  {},
-  {}
-]
+function levels(scenarios, player1) {
+  let currentScene = morningScenarios[scene]
+  if (scene === 0) {
+    player1.spoons += morningScenarios[scene].spoons
+    player1.day = 1
 
-const bonusScenarios = [
-  {},
-  {},
-  {},
-  {},
-  {}
-]
+    gameBoard.setAttribute("style", `background: url(${currentScene.background})`)
+    document.getElementById("gameHead").innerHTML += `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
+    scene += 1
+  }
+
+
+}
+
+
