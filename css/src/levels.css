@@ -43,8 +43,22 @@ main {
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 200px;
+  align-self: center;
+}
+
+.buttons button {
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 5px 10px;
+  border-radius: 8px;
+  transition: all 1s;
+  border: 2px solid black;
+  box-shadow: 1px 1px black;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  transition: all 1s;
+  background-color: white;
+  box-shadow: 3px 5px black;
 }
