@@ -14,20 +14,6 @@ document.querySelector("#letsGo").onclick = () => {
   avatars(player1);
   levels(morningScenarios, player1, yes);
 
-
-  document.getElementById("yes").onclick = () => {
-    levels(morningScenarios, player1, yes);
-    let lastScene = scene - 1
-
-    player1.spoons -= morningScenarios[lastScene].yes
-  }
-  document.getElementById("no").onclick = () => {
-    levels(morningScenarios, player1, no);
-    let lastScene = scene - 1
-
-    player1.spoons -= morningScenarios[lastScene].no
-  }
-
 }
 // Player class
 class player {
@@ -226,6 +212,16 @@ function levels(scenarios, player1, value) {
     yesButton.innerHTML = currentScene.buttonYes
     noButton.innerHTML = currentScene.buttonNo
     setAvi(player1);
+
+    document.getElementById("yes").onclick = () => {
+      levels(morningScenarios, player1, yes);
+      player1.spoons -= currentScene.yes
+    }
+    document.getElementById("no").onclick = () => {
+      levels(morningScenarios, player1, no);
+      player1.spoons -= currentScene.no
+    }
+  
     scene += 1
   }
   else if (scene < scenarios.length) {
@@ -235,6 +231,16 @@ function levels(scenarios, player1, value) {
     yesButton.innerHTML = currentScene.buttonYes
     noButton.innerHTML = currentScene.buttonNo
     setAvi(player1);
+
+    document.getElementById("yes").onclick = () => {
+      levels(morningScenarios, player1, yes);
+      player1.spoons -= currentScene.yes
+    }
+    document.getElementById("no").onclick = () => {
+      levels(morningScenarios, player1, no);
+      player1.spoons -= currentScene.no
+    }
+  
     scene += 1
   }
   else if (scene === scenarios.length && player1.day < 7) {
@@ -248,6 +254,16 @@ function levels(scenarios, player1, value) {
     yesButton.innerHTML = currentScene.buttonYes
     noButton.innerHTML = currentScene.buttonNo
     setAvi(player1);
+
+    document.getElementById("yes").onclick = () => {
+      levels(morningScenarios, player1, yes);
+      player1.spoons -= currentScene.yes
+    }
+    document.getElementById("no").onclick = () => {
+      levels(morningScenarios, player1, no);
+      player1.spoons -= currentScene.no
+    }
+  
     scene += 1
   }
   else if (scene === scenarios.length && player1.day === 7) {
