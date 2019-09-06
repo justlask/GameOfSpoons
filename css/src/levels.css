@@ -104,32 +104,15 @@ main {
 
 
 #response {
+  opacity: 0;
+  font-size: 22px;
   position: absolute;
-  height: 150px;
-  width: 250px;
-  left: 250px;
-  top: 200px;
+  left: 150px;
+  top: 10px;
   z-index: 1;
-  padding: 15px;
+  padding: 25px 15px;
   background-color: white;
   box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+  transition: all 0.3s;
+  border-radius: 50%;
 }
-
-
-
-/*
-avatar {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    left: 200px;
-    top: 230px;
-    z-index: 2;
-    padding: 15px;
-    border-radius: 50%;
-    background-color: inherit;
-    border: 2px solid inherit;
-    background-color: inherit;
-}
-
-*/

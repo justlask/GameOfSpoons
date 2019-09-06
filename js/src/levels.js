@@ -57,8 +57,7 @@ function randomSpoons() {
   return spoonValues[random]
 }
 
-  //“Your alarm goes off, it’s 7:20 am, your job is expecting you to arrive by 8am.
-  // You crack your eyes open, you’re tired, you didn’t sleep well last night.”
+//
   let gameBoard = document.getElementById("gameBoard")
   let prompt = document.getElementById("prompt")
   let buttons = document.querySelector(".buttons")
@@ -74,6 +73,7 @@ function levels(scenarios, player1, value) {
 
   // for weekdays
   if (player1.day <= 5) {
+    document.getElementById("response").setAttribute("style", "opacity: 0")
     let currentScene = scenes[scene]
     if (scene === 0) {
       document.getElementById("avatar").setAttribute("style", `background: center / contain no-repeat url(${player1.happy}`)
@@ -86,15 +86,22 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, yes)
+        // levels(scenes, player1, yes)
+        setTimeout(function() {
+          levels(scenes, player1, yes)
+        }, 1000)
+
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.no} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
         scene += 1
-        levels(scenes, player1, no);
+        setTimeout(function() {
+          levels(scenes, player1, no)
+        }, 1000)
       }
     
     }
@@ -110,15 +117,21 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, yes);
+        setTimeout(function() {
+          levels(scenes, player1, yes)
+        }, 1000)
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, no);
+        setTimeout(function() {
+          levels(scenes, player1, yes)
+        }, 1000)
       }
     
     }
@@ -132,15 +145,21 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, yes);
+        setTimeout(function() {
+          levels(scenes, player1, yes)
+        }, 1000)
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.no} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, no);
+        setTimeout(function() {
+          levels(scenes, player1, no)
+        }, 1000);
       }
 
     }
@@ -158,15 +177,21 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, yes);
+        setTimeout(function() {
+          levels(scenes, player1, yes)
+        }, 1000)
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.no} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, no);
+        setTimeout(function() {
+          levels(scenes, player1, no)
+        }, 1000)
       }
     }
     else if (scene === scenarios.length) {
@@ -183,15 +208,21 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, yes);
+        setTimeout(function() {
+          levels(scenes, player1, yes)
+        }, 1000)
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.no} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
+        document.getElementById("response").setAttribute("style", "opacity: 1")
         scene += 1
-        levels(scenes, player1, no);
+        setTimeout(function() {
+          levels(scenes, player1, no)
+        }, 1000)
       }
     }
   }
@@ -211,13 +242,13 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} spoon`
         scene += 1
         levels(weekend, player1, yes);
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.no} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.no} spoon`
         scene += 1
         levels(weekend, player1, no);
       }
@@ -234,13 +265,13 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} spoon`
         scene += 1
         levels(weekend, player1, yes);
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.no} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.no} spoon`
         scene += 1
         levels(weekend, player1, no);
       }
@@ -260,13 +291,13 @@ function levels(scenarios, player1, value) {
 
       document.getElementById("yes").onclick = () => {
         player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonYes} cost you ${currentScene.yes} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.yes} spoon`
         scene += 1
         levels(weekend, player1, yes);
       }
       document.getElementById("no").onclick = () => {
         player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `choosing ${currentScene.buttonNo} cost you ${currentScene.no} spoon`
+        document.getElementById("response").innerHTML = `-${currentScene.no} spoon`
         scene += 1
         levels(weekend, player1, no);
       }
