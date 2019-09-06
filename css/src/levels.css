@@ -103,6 +103,19 @@ main {
 }
 
 
+#response {
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  left: 250px;
+  top: 200px;
+  z-index: 1;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+}
+
+
 
 /*
 avatar {
