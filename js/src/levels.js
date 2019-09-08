@@ -1,11 +1,9 @@
 // Creates instance of player, with values, adds avatars depending on gender
 document.querySelector("#letsGo").onclick = () => {
   let name = document.querySelector("#name").value 
-  let age = document.querySelector("#age").value
   let gender = document.querySelector("#gender").value
-  let illness = document.querySelector("#illness").value
 
-  let player1 = new player(name, gender, age, illness)
+  let player1 = new player(name, gender)
   document.getElementById("init").setAttribute("style", "display:none")
   document.querySelector("main").setAttribute("style", "display:flex")
 
@@ -17,8 +15,6 @@ class player {
   constructor(name, gender, age, illness) {
     this.name = name;
     this.gender = gender;
-    this.age = age;
-    this.illness = illness
   }
   spoons = 0;
   day = 0;

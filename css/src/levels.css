@@ -24,7 +24,6 @@ main {
 }
 
 #init {
-  padding: 100px 50px;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
