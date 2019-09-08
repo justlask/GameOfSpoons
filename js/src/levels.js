@@ -10,7 +10,6 @@ document.querySelector("#letsGo").onclick = () => {
   avatars(player1);
   levels(weekday, player1);
 }
-// document.querySelector("#letsGo").addEventListener("onclick" | "touchstart") = () => 
 // Player class
 class player {
   constructor(name, gender) {
@@ -192,8 +191,8 @@ function newDay(scenarios, player1, currentScene){
 }
 //handles everything that happens on button yes click
 function handleYes(scenarios, player1, currentScene) {
-  player1.spoons -= currentScene.yes
-  document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+  player1.spoons += currentScene.yes
+  document.getElementById("response").innerHTML = `${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
   document.getElementById("response").setAttribute("style", "opacity: 1")
   gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
   setAvi(player1);
@@ -202,8 +201,8 @@ function handleYes(scenarios, player1, currentScene) {
 }
 //handles everything that happens on button no click
 function handleNo(scenarios, player1, currentScene) {
-  player1.spoons -= currentScene.no
-  document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
+  player1.spoons += currentScene.no
+  document.getElementById("response").innerHTML = `${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
   document.getElementById("response").setAttribute("style", "opacity: 1")
   gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
   setAvi(player1);
@@ -223,15 +222,14 @@ function newScene(scenarios, player1, currentScene) {
 function endResult(player1) {
   //win
   if (player1.spoons > 0) {
-    alert("you made it through another week.")
     document.getElementById("final").innerHTML = `You made it through another week.<br> Your final spoon count was ${player1.spoons}.<br><br>
     If this game helped you understand what it's like to live with chronic illness better, please <style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#000000 !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 0px 9px !important;font-size: 17px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/justlask"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>`
-    document.getElementById("final").setAttribute("style", "opacity: 1")
+    document.getElementById("final").setAttribute("style", "display: block")
   }
   // "lose"
   else {
     document.getElementById("final").innerHTML = `You were not careful with your spoons and over exerted yourself. <br>Doing this could cause you to have a flare up.<br> Your final spoon count was ${player1.spoons}.<br><br>
     If this game helped you understand what it's like to live with chronic illness better, please <style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#000000 !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 0px 9px !important;font-size: 17px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/justlask"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>`
-    document.getElementById("final").setAttribute("style", "opacity: 1")
+    document.getElementById("final").setAttribute("style", "display: block")
   }
 }
