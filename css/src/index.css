@@ -9,6 +9,7 @@ body {
   color: black;
   margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 
 .fa {
@@ -32,6 +33,7 @@ header {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  width: 100vw;
 }
 
 footer {
@@ -46,12 +48,11 @@ footer .fa {
 }
 
 nav {
-  width: 500px;
+  width: 600px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 
 
 #about {
@@ -107,7 +108,7 @@ nav {
   width: auto;
 }
 
-#info {
+#info{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,6 +134,8 @@ nav {
   box-shadow: 3px 5px black;
 }
 
+
+
 #gender,
 #name {
   padding: 5px 15px;
@@ -141,6 +144,7 @@ nav {
   transition: all 3s;
   border: 2px solid black;
   box-shadow: 1px 1px black;
+  margin: 20px;
 }
 input {
   margin-right: 20px;
@@ -150,12 +154,37 @@ label {
   font-weight: bold;
 }
 
+#aboutthedev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  width: 60vw;
+}
+
+/*Media Queries*/
 @media only screen and (max-width: 900px) {
   main {
     padding: 0;
   }
-
   header {
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #about  div:first-child {
+    flex-direction: column;
+    padding: 25px 50px;
+  }
+  #playerInfo {
+    display: flex;
     flex-direction: column;
   }
 }

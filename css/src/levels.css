@@ -4,14 +4,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 18px;
 }
-
-canvas {
-  border: 2px solid black;
-  background-color: white;
-}
-
 
 main {
   display: none;
@@ -38,7 +32,6 @@ main {
   align-items: center;
   border-bottom: 1px inherit ;
   box-shadow: 0px 5px 5px rgba(0,0,0, 0.2);
-  background-color: #ededed;
 }
 #gameBoard {
   height: 600px;
@@ -75,6 +68,7 @@ main {
   background-color: white;
 }
 .buttons {
+  display: flex;
   align-self: center;
   padding-bottom: 20px;
 }
@@ -108,10 +102,44 @@ main {
   position: absolute;
   left: 150px;
   top: 10px;
-  z-index: 1;
+  z-index: 2;
   padding: 25px 15px;
-  background-color: white;
+  background-color: pink;
   box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
   transition: all 0.3s;
   border-radius: 50%;
+}
+
+#final {
+  opacity: 0;
+  font-size: 22px;
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  height: 300px;
+  width: 500px;
+  padding: 25px 15px;
+  background-color: pink;
+  box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+  transition: all 0.5s;
+  border-radius: 16px;
+  z-index: 3;
+}
+
+
+@media only screen and (max-width: 900px) {
+  body {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    height: 100%;
+  }
+  #gameBoard {
+    min-height: 400px;
+    height: 100%;
+    width: 100vw;
+    max-height: 600px;
+    max-width: 800px;
+  }
 }
