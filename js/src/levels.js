@@ -9,11 +9,8 @@ document.querySelector("#letsGo").onclick = () => {
   document.getElementById("init").setAttribute("style", "display:none")
   document.querySelector("main").setAttribute("style", "display:flex")
 
-
-
   avatars(player1);
-  levels(scenes, player1, yes);
-
+  levels(weekday, player1);
 }
 // Player class
 class player {
@@ -26,8 +23,6 @@ class player {
   spoons = 0;
   day = 0;
 }
-
-
 // Creates Avatars to add to player object instance.
 function avatars(player) {
   if (player.gender === "female") {
@@ -49,268 +44,14 @@ function avatars(player) {
     player.puke = "../../assets/getavataaars/nb-puke.svg"
   }
 }
-
+// picks a random number of spoons values 6-12
 function randomSpoons() {
   let spoonValues = [6,7,8,9,10,11,12]
   let random = Math.floor(Math.random() * spoonValues.length)
 
   return spoonValues[random]
 }
-
-//
-  let gameBoard = document.getElementById("gameBoard")
-  let prompt = document.getElementById("prompt")
-  let buttons = document.querySelector(".buttons")
-  let gameScore = document.getElementById("gameHead")
-  let scene = 0;
-
-  let yesButton = document.getElementById("yes");
-  let noButton = document.getElementById("no");
-
-
-
-function levels(scenarios, player1, value) {
-
-  // for weekdays
-  if (player1.day <= 5) {
-    document.getElementById("response").setAttribute("style", "opacity: 0")
-    let currentScene = scenes[scene]
-    if (scene === 0) {
-      document.getElementById("avatar").setAttribute("style", `background: center / contain no-repeat url(${player1.happy}`)
-      gameScore.innerHTML = `<p>Welcome to the Game of spoons ${player1.name}.</p>`
-      gameBoard.setAttribute("style", `background: center / contain no-repeat url(${currentScene.background})`)
-      prompt.innerHTML = `<p>Your goal is to make it through the week with ${player1.illness}. Think of spoons as your energy, take care of them, good luck.
-      Are you ready?</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        // levels(scenes, player1, yes)
-        setTimeout(function() {
-          levels(scenes, player1, yes)
-        }, 1000)
-
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, no)
-        }, 1000)
-      }
-    
-    }
-    else if (scene === 1) {
-      player1.spoons += randomSpoons()
-      player1.day = 1
-      gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
-      gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
-      prompt.innerHTML = `<p>${currentScene.text}</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-      setAvi(player1);
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, yes)
-        }, 1000)
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, yes)
-        }, 1000)
-      }
-    
-    }
-    else if (scene < scenarios.length) {
-      gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
-      gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
-      prompt.innerHTML = `<p>${currentScene.text}</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-      setAvi(player1);
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, yes)
-        }, 1000)
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, no)
-        }, 1000);
-      }
-
-    }
-    else if (scene === scenarios.length && player1.day === 5) {
-      scene = 1;
-      let currentScene = weekend[scene]
-      player1.day += 1
-      player1.spoons += randomSpoons();
-      gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
-      gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
-      prompt.innerHTML = `<p>${currentScene.text}</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-      setAvi(player1);
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, yes)
-        }, 1000)
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, no)
-        }, 1000)
-      }
-    }
-    else if (scene === scenarios.length) {
-      scene = 1;
-      let currentScene = scenes[scene]
-      player1.day += 1
-      player1.spoons += randomSpoons();
-      gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
-      gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
-      prompt.innerHTML = `<p>${currentScene.text}</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-      setAvi(player1);
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, yes)
-        }, 1000)
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
-        document.getElementById("response").setAttribute("style", "opacity: 1")
-        scene += 1
-        setTimeout(function() {
-          levels(scenes, player1, no)
-        }, 1000)
-      }
-    }
-  }
-
-    // for weekends
-    else if (player1.day === 6 || player1.day === 7) {
-      let currentScene = weekend[scene]
-      if (scene === 1) {
-      player1.spoons += randomSpoons()
-      player1.day = 1
-      gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
-      gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
-      prompt.innerHTML = `<p>${currentScene.text}</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-      setAvi(player1);
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} spoon`
-        scene += 1
-        levels(weekend, player1, yes);
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.no} spoon`
-        scene += 1
-        levels(weekend, player1, no);
-      }
-    
-    }
-    else if (scene < scenarios.length) {
-      let currentScene = weekend[scene]
-      gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
-      gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
-      prompt.innerHTML = `<p>${currentScene.text}</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-      setAvi(player1);
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} spoon`
-        scene += 1
-        levels(weekend, player1, yes);
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.no} spoon`
-        scene += 1
-        levels(weekend, player1, no);
-      }
-
-    }
-    else if (scene === scenarios.length && player1.day < 7) {
-      scene = 1;
-      let currentScene = weekend[scene]
-      player1.day += 1
-      player1.spoons += randomSpoons();
-      gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
-      gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
-      prompt.innerHTML = `<p>${currentScene.text}</p>`
-      yesButton.innerHTML = currentScene.buttonYes
-      noButton.innerHTML = currentScene.buttonNo
-      setAvi(player1);
-
-      document.getElementById("yes").onclick = () => {
-        player1.spoons -= currentScene.yes
-        document.getElementById("response").innerHTML = `-${currentScene.yes} spoon`
-        scene += 1
-        levels(weekend, player1, yes);
-      }
-      document.getElementById("no").onclick = () => {
-        player1.spoons -= currentScene.no
-        document.getElementById("response").innerHTML = `-${currentScene.no} spoon`
-        scene += 1
-        levels(weekend, player1, no);
-      }
-      }
-
-      else if (scene === weekend.length && player1.day === 7) {
-        if (player1.spoons > 0) alert("you made it through another week.")
-        else alert("you suffered a flare up, got a cold and were out of work for a week")
-      }
-    }
-
-}
-
+//changes the avatar depending on # of spoons
 function setAvi(player) {
   if (player.spoons > 1) {
     document.getElementById("avatar").setAttribute("style", `background: center / contain no-repeat url(${player.happy}`)
@@ -319,4 +60,166 @@ function setAvi(player) {
     document.getElementById("avatar").setAttribute("style", `background: center / contain no-repeat url(${player.dizzy}`)
   }
   else document.getElementById("avatar").setAttribute("style", `background: center / contain no-repeat url(${player.puke}`)
+}
+
+// sets up variables to reference in gameplay
+let gameBoard = document.getElementById("gameBoard")
+let prompt = document.getElementById("prompt")
+let gameScore = document.getElementById("gameHead")
+let yesButton = document.getElementById("yes");
+let noButton = document.getElementById("no");
+
+let scene = 1;
+//handles progression through scenes
+function levels(scenarios, player1) {
+  let currentScene = scenarios[scene]
+
+  document.getElementById("response").setAttribute("style", "opacity: 0")
+
+  // for weekdays
+  if (player1.day <= 5) {
+    if (scene === 1) {
+      newDay(weekday, player1, currentScene)
+
+      yesButton.onclick = () => {
+        handleYes(weekday, player1, currentScene)
+      }
+      noButton.onclick = () => {
+        handleNo(weekday, player1, currentScene);
+      }
+    }
+    //during the day
+    else if (scene < scenarios.length) {
+      newScene(weekday, player1, currentScene);
+
+      yesButton.onclick = () => {
+        handleYes(weekday, player1, currentScene)
+      }
+      noButton.onclick = () => {
+        handleNo(weekday, player1, currentScene);
+      }
+    }
+    //last scene of the last weekday
+    else if (scene === scenarios.length && player1.day === 5) {
+      scene = 1;
+      let currentScene = weekend[scene]
+
+      newDay(weekend, player1, currentScene);
+
+      yesButton.onclick = () => {
+        handleYes(weekend, player1, currentScene)
+      }
+      noButton.onclick = () => {
+        handleNo(weekend, player1, currentScene);
+      }
+
+    }
+    //last scene of the day
+    else if (scene === scenarios.length) {
+      scene = 1
+      let currentScene = weekday[scene]
+      newDay(weekday, player1, currentScene)
+
+      yesButton.onclick = () => {
+        handleYes(weekday, player1, currentScene)
+      }
+      noButton.onclick = () => {
+        handleNo(weekday, player1, currentScene);
+      }
+    }
+  }
+  //for weekends//
+  else if (player1.day === 6 || player1.day === 7) {
+    let currentScene = weekend[scene]
+    document.getElementById("response").setAttribute("style", "opacity: 0")
+    //first day of the week
+    if (scene === 1) {
+      scene = 1
+      let currentScene = weekday[scene]
+      newDay(weekend, player1, currentScene);
+
+      yesButton.onclick = () => {
+        handleYes(weekend, player1, currentScene)
+      }
+      noButton.onclick = () => {
+        handleNo(weekend, player1, currentScene);
+      }
+    }
+    //during the day
+    else if (scene < scenarios.length) {
+      newScene(weekend,player1, currentScene);
+
+      yesButton.onclick = () => {
+        handleYes(weekend, player1, currentScene)
+      }
+      noButton.onclick = () => {
+        handleNo(weekend, player1, currentScene);
+      }
+    }
+    else if (scene === scenarios.length && player1.day < 7) {
+      scene = 1
+      let currentScene = weekend[scene]
+      newDay(weekend, player1, currentScene);
+
+      yesButton.onclick = () => {
+        handleYes(weekend, player1, currentScene)
+      }
+      noButton.onclick = () => {
+        handleNo(weekend, player1, currentScene);
+      }
+    }
+    // final scene of final day
+    else if (scene === weekend.length && player1.day === 7) {
+      if (player1.spoons > 0) alert("you made it through another week.")
+      else alert("you suffered a flare up, got a cold and were out of work for a week")
+    }
+  }
+}
+//handles going from day to day
+function newDay(scenarios, player1, currentScene){
+  let newSpoons = randomSpoons();
+  player1.spoons += newSpoons
+  player1.day += 1
+  setAvi(player1);
+
+  document.getElementById("response").innerHTML = `+${newSpoons} <i class="fa fa-utensil-spoon"></i>`
+  document.getElementById("response").setAttribute("style", "opacity: 1")
+  setTimeout(function() {
+    document.getElementById("response").setAttribute("style", "opacity: 0")
+  }, 1000)
+
+  gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
+  gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
+  prompt.innerHTML = `<p>${currentScene.text}</p>`
+  yesButton.innerHTML = currentScene.buttonYes
+  noButton.innerHTML = currentScene.buttonNo
+}
+//handles everything that happens on button yes click
+function handleYes(scenarios, player1, currentScene) {
+  player1.spoons -= currentScene.yes
+  document.getElementById("response").innerHTML = `-${currentScene.yes} <i class="fa fa-utensil-spoon"></i>`
+  document.getElementById("response").setAttribute("style", "opacity: 1")
+  gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
+  setAvi(player1);
+   scene += 1
+   setTimeout(function(){levels(scenarios, player1)}, 1000)
+}
+//handles everything that happens on button no click
+function handleNo(scenarios, player1, currentScene) {
+  player1.spoons -= currentScene.no
+  document.getElementById("response").innerHTML = `-${currentScene.no} <i class="fa fa-utensil-spoon"></i>`
+  document.getElementById("response").setAttribute("style", "opacity: 1")
+  gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
+  setAvi(player1);
+  scene += 1
+  setTimeout(function(){levels(scenarios, player1)}, 1000)
+}
+//flips through to the next scene of the day
+function newScene(scenarios, player1, currentScene) {
+  gameBoard.setAttribute("style", `background: center / cover no-repeat url(${currentScene.background})`)
+  gameScore.innerHTML = `<p>Spoons: ${player1.spoons}</p><p>Day: ${player1.day}</p>`
+  prompt.innerHTML = `<p>${currentScene.text}</p>`
+  yesButton.innerHTML = currentScene.buttonYes
+  noButton.innerHTML = currentScene.buttonNo
+  setAvi(player1);
 }

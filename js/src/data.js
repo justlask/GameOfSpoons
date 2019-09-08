@@ -1,5 +1,5 @@
 
-const scenes = [
+const weekday = [
   {
     text: `Hello, welcome to the game of spoons.`,
     yes: 0,
