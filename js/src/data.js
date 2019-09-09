@@ -17,7 +17,7 @@ const weekday = [
     buttonYes: "Wake up and face the day.",
     buttonNo: "Snooze it.",
     animate: "alarm",
-    sound: null
+    sound: "https://freesound.org/data/previews/128/128910_2337290-lq.mp3"
   },
   {
     text: `It’s been a couple days, you kind of stink. Do you take a shower?`,

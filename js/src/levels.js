@@ -99,7 +99,6 @@ function levels(scenarios, player1) {
     else if (scene === scenarios.length && player1.day === 5) {
       scene = 1;
       let currentScene = weekend[scene]
-
       newDay(weekend, player1, currentScene);
 
       yesButton.onclick = () => {
@@ -132,6 +131,9 @@ function levels(scenarios, player1) {
     if (scene === 1) {
       scene = 1
       let currentScene = weekday[scene]
+      gameBoard.innerHTML += `<audio id="alarm"><source src="${currentScene.sound}" /></audio>`
+      const alarm = document.getElementById("alarm")
+      alarm.play();
       newDay(weekend, player1, currentScene);
 
       yesButton.onclick = () => {
@@ -172,6 +174,10 @@ function levels(scenarios, player1) {
 }
 //handles going from day to day
 function newDay(scenarios, player1, currentScene){
+  gameBoard.innerHTML += `<audio id="alarm"><source src="${currentScene.sound}" /></audio>`
+  const alarm = document.getElementById("alarm")
+  alarm.play();
+
   let newSpoons = randomSpoons();
   player1.spoons += newSpoons
   player1.day += 1
